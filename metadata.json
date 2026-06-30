@@ -1,0 +1,6 @@
+{
+  "name": "Kavrol",
+  "description": "Kavrol predicts when you'll be short before a bill is due, helping protect the payment on transparent terms so bills are paid on time.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
