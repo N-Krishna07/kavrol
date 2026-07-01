@@ -1499,31 +1499,7 @@ export default function App() {
           </div>
         )}
       </AnimatePresence>
-
-      {/* Subtle sticky hint near bottom scroll */}
-      <AnimatePresence>
-        {showFloatingCTA && !isCtaMinimized && (
-          <motion.div
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 0.8, x: 0 }}
-            exit={{ opacity: 0, x: -10 }}
-            transition={{ delay: 1, duration: 0.3 }}
-            onClick={() => {
-              const el = document.getElementById('section-7-early-access');
-              if (el) {
-                const yOffset = -70;
-                const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
-                window.scrollTo({ top: y, behavior: 'smooth' });
-              }
-            }}
-            className="fixed bottom-6 left-6 z-45 hidden md:flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-zinc-950/90 dark:bg-zinc-900/90 border border-zinc-800/40 backdrop-blur-md text-[10px] font-mono text-zinc-400 hover:text-brand-green-400 cursor-pointer shadow-md select-none transition-all hover:scale-105 active:scale-95 duration-200"
-          >
-            <span>Join Early Access anytime</span>
-            <span className="text-brand-green-500 animate-pulse font-bold">→</span>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
+      
       {/* Floating Sticky CTA Button on scroll */}
       <AnimatePresence>
         {showFloatingCTA && (

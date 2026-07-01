@@ -36,7 +36,6 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, type, t
     { id: 't-disclaimers', label: '7. Platform Disclaimers', icon: FileText },
     { id: 't-liability', label: '8. Limitation of Liability', icon: Shield },
     { id: 't-termination', label: '9. Account Termination', icon: X },
-    { id: 't-contact', label: '10. Contact Information', icon: Mail },
   ];
 
   const sections = type === 'privacy' ? privacySections : termsSections;
@@ -396,7 +395,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, type, t
                     </div>
                     <div className="flex items-center gap-2">
                       <MapPin className="w-4 h-4 text-brand-green-500" />
-                      <span>Kavrol Technologies Inc. • Attn: Legal Division • 100 Pine Street, San Francisco, CA 94111</span>
+                      <span>Kavrol Technologies Inc. • Attn: Legal Division </span>
                     </div>
                   </div>
                 </section>
@@ -569,31 +568,6 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, type, t
                   <p className={`text-xs leading-relaxed ${isDark ? 'text-zinc-400' : 'text-zinc-650'}`}>
                     Account termination requests are pending until all outstanding gap protection repayment schedules are cleared. Kavrol reserves the right to suspend, terminate, or cancel your profile eligibility at any time, with or without notice, if we identify systematic balance manipulation, ACH failures, or security violations.
                   </p>
-                </section>
-
-                {/* Section 10 */}
-                <section id="t-contact" className="space-y-4 pt-4 border-t border-zinc-900/10 dark:border-zinc-900/60">
-                  <div className="flex items-center gap-2 text-brand-green-400">
-                    <Mail className="w-4 h-4" />
-                    <h4 className={`text-base font-display font-bold ${isDark ? 'text-zinc-100' : 'text-zinc-950'}`}>
-                      10. Contact Information
-                    </h4>
-                  </div>
-                  <p className={`text-xs leading-relaxed ${isDark ? 'text-zinc-400' : 'text-zinc-650'}`}>
-                    For support, physical letters, billing disputations, or platform agreement questions, contact us:
-                  </p>
-                  <div className={`p-4 rounded-xl border text-xs space-y-2 ${
-                    isDark ? 'bg-zinc-900/40 border-zinc-850' : 'bg-zinc-50 border-zinc-200'
-                  }`}>
-                    <div className="flex items-center gap-2">
-                      <Mail className="w-4 h-4 text-brand-green-500" />
-                      <span>support@kavrol.com</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4 text-brand-green-500" />
-                      <span>Kavrol Technologies Inc. • 100 Pine Street, San Francisco, CA 94111</span>
-                    </div>
-                  </div>
                 </section>
 
               </div>
